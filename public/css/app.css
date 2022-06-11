@@ -2,7 +2,6 @@ body {
   font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #232323;
-  height: 4000px;
 }
 
 nav li:last-child a {
@@ -45,6 +44,49 @@ section.hero {
 }
 .add-to-cart:hover {
   background: #00db37;
-  border: 2px solid secondary;
+  border: 2px solid #dcf7f7;
   color: #dcf7f7;
+}
+
+.btn-primary {
+  background: #00db37;
+  border: 2px solid #00db37;
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  background: #42f542;
+  border: 2px solid #232323;
+  color: #232323;
+}
+
+section.cart {
+  background: #dcf7f7;
+  min-height: calc(100vh - 70px);
+}
+section.cart .amount {
+  color: #00db37;
+}
+
+section.resistration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dcf7f7;
+  min-height: calc(100vh - 70px);
+}
+section.resistration .reg-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.resistration .reg-card .form {
+  background-color: rgb(96, 117, 117);
+  box-shadow: 0.2rem 0.2rem 0.3rem rgb(30, 31, 31);
+}
+section.resistration .reg-card .form div:last-child a {
+  text-decoration: none;
+  color: #00db37;
+}
+section.resistration .reg-card .form div:last-child a:hover {
+  text-decoration: underline;
 }

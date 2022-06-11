@@ -4,7 +4,6 @@ body{
     font-family: 'Lato', sans-serif;
     -webkit-font-smoothing: antialiased ;
     color: $dark;
-    height: 4000px;
 }
 
 nav li:last-child a {
@@ -42,7 +41,53 @@ section.hero{
     transition: $smooth;
     &:hover{
         background: $primary;
-        border: 2px solid secondary;
+        border: 2px solid $secondary;
         color: $secondary;
     }
 }
+
+.btn-primary{
+    background: $primary;
+    border: 2px solid $primary;
+    transition: $smooth;
+    &:hover{
+        background: $primary-hover;
+        border: 2px solid $dark;
+        color: $dark;
+    } 
+}
+
+section.cart{
+    background: $secondary;
+    min-height:calc(100vh - 70px);
+
+    .amount{
+        color: $primary;
+    }
+}
+
+section.resistration{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $secondary;
+    min-height:calc(100vh - 70px);
+    .reg-card{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .form{
+            background-color: rgb(96, 117, 117);
+            box-shadow: 0.2rem 0.2rem 0.3rem rgb(30, 31, 31);
+            div:last-child a{
+                text-decoration: none;
+                color: $primary;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        
+    }
+}
+
