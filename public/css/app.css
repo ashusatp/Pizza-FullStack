@@ -30,10 +30,16 @@ section.hero {
   background: #dcf7f7;
 }
 
-.size {
+.size-div {
   background: rgb(222, 222, 222);
-  width: 3.7rem;
-  height: 1.5rem;
+  min-width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.size-div .size {
+  width: 100%;
+  height: 100%;
   text-align: center;
 }
 

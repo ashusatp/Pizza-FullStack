@@ -17,142 +17,28 @@
     <div>
         <div class="row justify-content-between ">
 
-            <div class="pizaCard col-lg-3">
-                <div class="d-flex flex-column align-items-center justify-content-between">
-                    <img class="py-3 mx-auto img_fluid" src="/img/pizza.png" alt="pizza" width="200px">
-                    <div class="d-flex flex-column align-items-center justify-content-center">
-                        <h2 class="text-center fw-bold">Margherita</h2>
-                        <span class="size text-uppercase fw-bold rounded-pill">small</span>
-                        <div class="w-100 d-flex align-items-center justify-content-around my-2 py-1">
-                            <span class="fw-bold">₹250</span>
-                            <button class="add-to-cart rounded-pill">
-                                <span>+</span>
-                                <span>Add</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <% pizzas.forEach(function(pizza){ %>
 
-            <div class="pizaCard col-lg-3">
-                <div class="d-flex flex-column align-items-center justify-content-between">
-                    <img class="py-3 mx-auto img_fluid" src="/img/pizza.png" alt="pizza" width="200px">
-                    <div class="d-flex flex-column align-items-center justify-content-center">
-                        <h2 class="text-center fw-bold">Margherita</h2>
-                        <span class="size text-uppercase fw-bold rounded-pill">small</span>
-                        <div class="w-100 d-flex align-items-center justify-content-around my-2 py-1">
-                            <span class="fw-bold">₹250</span>
-                            <button class="add-to-cart rounded-pill">
-                                <span>+</span>
-                                <span>Add</span>
-                            </button>
+                <div class="pizaCard col-lg-3">
+                    <div class="d-flex flex-column align-items-center justify-content-between">
+                        <img class="py-3 mx-auto img_fluid" src="/img/<%= pizza.image %>" alt="pizza" width="200px">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <h2 class="text-center fw-bold"><%= pizza.name %></h2>
+                            <div class="size-div rounded-pill"><span class="w-100 size text-center text-uppercase fw-bold "><%= pizza.size %></span></div>
+                            <div class="w-100 d-flex align-items-center justify-content-around my-2 py-1">
+                                <span class="fw-bold">₹<%= pizza.price %></span>
+                                <button data-pizza=" <%= JSON.stringify(pizza) %> " class="add-to-cart rounded-pill">
+                                    <span>+</span>
+                                    <span>Add</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="pizaCard col-lg-3">
-                <div class="d-flex flex-column align-items-center justify-content-between">
-                    <img class="py-3 mx-auto img_fluid" src="/img/pizza.png" alt="pizza" width="200px">
-                    <div class="d-flex flex-column align-items-center justify-content-center">
-                        <h2 class="text-center fw-bold">Margherita</h2>
-                        <span class="size text-uppercase fw-bold rounded-pill">small</span>
-                        <div class="w-100 d-flex align-items-center justify-content-around my-2 py-1">
-                            <span class="fw-bold">₹250</span>
-                            <button class="add-to-cart rounded-pill">
-                                <span>+</span>
-                                <span>Add</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <% })%>
 
-            <div class="pizaCard col-lg-3">
-                <div class="d-flex flex-column align-items-center justify-content-between">
-                    <img class="py-3 mx-auto img_fluid" src="/img/pizza.png" alt="pizza" width="200px">
-                    <div class="d-flex flex-column align-items-center justify-content-center">
-                        <h2 class="text-center fw-bold">Margherita</h2>
-                        <span class="size text-uppercase fw-bold rounded-pill">small</span>
-                        <div class="w-100 d-flex align-items-center justify-content-around my-2 py-1">
-                            <span class="fw-bold">₹250</span>
-                            <button class="add-to-cart rounded-pill">
-                                <span>+</span>
-                                <span>Add</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pizaCard col-lg-3">
-                <div class="d-flex flex-column align-items-center justify-content-between">
-                    <img class="py-3 mx-auto img_fluid" src="/img/pizza.png" alt="pizza" width="200px">
-                    <div class="d-flex flex-column align-items-center justify-content-center">
-                        <h2 class="text-center fw-bold">Margherita</h2>
-                        <span class="size text-uppercase fw-bold rounded-pill">small</span>
-                        <div class="w-100 d-flex align-items-center justify-content-around my-2 py-1">
-                            <span class="fw-bold">₹250</span>
-                            <button class="add-to-cart rounded-pill">
-                                <span>+</span>
-                                <span>Add</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pizaCard col-lg-3">
-                <div class="d-flex flex-column align-items-center justify-content-between">
-                    <img class="py-3 mx-auto img_fluid" src="/img/pizza.png" alt="pizza" width="200px">
-                    <div class="d-flex flex-column align-items-center justify-content-center">
-                        <h2 class="text-center fw-bold">Margherita</h2>
-                        <span class="size text-uppercase fw-bold rounded-pill">small</span>
-                        <div class="w-100 d-flex align-items-center justify-content-around my-2 py-1">
-                            <span class="fw-bold">₹250</span>
-                            <button class="add-to-cart rounded-pill">
-                                <span>+</span>
-                                <span>Add</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pizaCard col-lg-3">
-                <div class="d-flex flex-column align-items-center justify-content-between">
-                    <img class="py-3 mx-auto img_fluid" src="/img/pizza.png" alt="pizza" width="200px">
-                    <div class="d-flex flex-column align-items-center justify-content-center">
-                        <h2 class="text-center fw-bold">Margherita</h2>
-                        <span class="size text-uppercase fw-bold rounded-pill">small</span>
-                        <div class="w-100 d-flex align-items-center justify-content-around my-2 py-1">
-                            <span class="fw-bold">₹250</span>
-                            <button class="add-to-cart rounded-pill">
-                                <span>+</span>
-                                <span>Add</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pizaCard col-lg-3">
-                <div class="d-flex flex-column align-items-center justify-content-between">
-                    <img class="py-3 mx-auto img_fluid" src="/img/pizza.png" alt="pizza" width="200px">
-                    <div class="d-flex flex-column align-items-center justify-content-center">
-                        <h2 class="text-center fw-bold">Margherita</h2>
-                        <span class="size text-uppercase fw-bold rounded-pill">small</span>
-                        <div class="w-100 d-flex align-items-center justify-content-around my-2 py-1">
-                            <span class="fw-bold">₹250</span>
-                            <button class="add-to-cart rounded-pill">
-                                <span>+</span>
-                                <span>Add</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
+                    
         </div>
 
     </div>
