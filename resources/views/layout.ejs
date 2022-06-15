@@ -30,8 +30,18 @@
             <ul class="container d-flex  align-items-center">
                 <li class="ms-5"><a href="/">Menu</a></li>
                 <li class="ms-5"><a href="/offer">Offer</a></li>
-                <li class="ms-5"><a href="/register">Register</a></li>
-                <li class="ms-5"><a href="/login">Login</a></li>
+
+                <% if(user){ %>
+                    <li class="ms-5">
+                        <form id="logout" action="/logout" method="POST">
+                            <a onclick="document.getElementById('logout').submit()" href="#">Logout</a>
+                        </form>
+                    </li>
+                <% } else{ %>
+                    <li class="ms-5"><a href="/register">Register</a></li>
+                    <li class="ms-5"><a href="/login">Login</a></li>
+                <% } %>
+
                 <li class="ms-5">
                     <a class="pt-2 pb-2 ps-2 pe-2 rounded" href="/cart">
                         <span id="cartCounter">

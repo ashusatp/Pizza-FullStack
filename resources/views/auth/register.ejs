@@ -1,40 +1,29 @@
 <section class="resistration">
     <div class="reg-card">
-        <form class="form py-4 row g-3 needs-validation justify-content-center w-50" novalidate>
+        <form action="/register" method="POST" class="form py-4 row g-3 needs-validation justify-content-center w-50" novalidate>
+
+            <% if(messages.error) { %>
+              <span><%= messages.error %></span>
+            <% } %>
+
             <div class="col-md-7">
-              <label for="validationCustom01" class="form-label">Username</label>
-              <input type="text" class="form-control" id="validationCustom01" value="" required placeholder="Username">
+              <label for="validationCustom01" class="form-label">name</label>
+              <input name="name" value="<%= messages.name %>"  type="text" class="form-control" id="validationCustom01">
               <div class="valid-feedback">
                 Looks good!
               </div>
             </div>
             <div class="col-md-7">
                 <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <input  name="email" value="<%= messages.email %>" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
             </div>
             <div class="col-md-7">
                 <label for="exampleFormControlInput1" class="form-label">password</label>
-                <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="password">
-            </div>
-            <div class="col-md-7">
-                <label for="exampleFormControlInput1" class="form-label">Confirm Password</label>
-                <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="password">
-            </div>
-            
-            <div class="col-7">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                <label class="form-check-label" for="invalidCheck">
-                  Agree to terms and conditions
-                </label>
-                <div class="invalid-feedback">
-                  You must agree before submitting.
-                </div>
-              </div>
+                <input name="password" type="password" class="form-control" id="exampleFormControlInput1" placeholder="password">
             </div>
             <div class="btnDiv col-md-7">
                 <div class="row justify-content-evenly">
-                    <button class="btn btn-primary col-md-4" type="submit">Login</button>
+                    <button class="btn btn-primary col-md-4" type="submit">register</button>
                     <a class="col-md-6 align-self-center" href="/login" >Already have account?</a>
                   </div>
             </div>
