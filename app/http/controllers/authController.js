@@ -84,7 +84,7 @@ const authController = () => {
           user
             .save()
             .then((user) => {
-              // login
+              console.log(user);
               res.redirect("/");
             })
             .catch((err) => {

@@ -1,5 +1,6 @@
 <section class="cart">
 
+    <% if(session.cart){%>
     <div class="w-50 order container py-5">
 
         <div class="d-flex align-items-center">
@@ -8,40 +9,32 @@
         </div>
         <hr>
             <div class="pizza-list py-2">
-                <div class="d-flex align-items-center">
-                    <img class="w-25" src="/img/pizza.png" alt="">
-                    <div class="ms-4 flex-grow-1">
-                        <h1>Marinara</h1>
-                        <span>MEDIUM</span>
+
+                <% for(let pizza of Object.values(session.cart.items)){%>
+                    <div class="d-flex align-items-center">
+                        <img class="w-25" src="/img/<%= pizza.item.image %>" alt="">
+                        <div class="ms-4 flex-grow-1">
+                            <h1><%= pizza.item.name %></h1>
+                            <span><%= pizza.item.size %></span>
+                        </div>
+
+                        <span class="flex-grow-1"><%= pizza.qty%></span>
+                        <span class="fw-bold fs-5 flex-grow-1"><%= pizza.qty * pizza.item.price %></span>
+
                     </div>
+                <% } %>    
 
-                    <span class="flex-grow-1">1 Pcs</span>
-                    <span class="fw-bold fs-5 flex-grow-1">₹300</span>
-
-                </div>
-            </div>
-            <div class="pizza-list py-2">
-                <div class="d-flex align-items-center">
-                    <img class="w-25" src="/img/pizza.png" alt="">
-                    <div class="ms-4 flex-grow-1">
-                        <h1>Marinara</h1>
-                        <span>MEDIUM</span>
-                    </div>
-
-                    <span class="flex-grow-1">1 Pcs</span>
-                    <span class="fw-bold fs-5 flex-grow-1">₹300</span>
-
-                </div>
             </div>
         <hr>
 
         <div class="text-end py-3">
             <div >
                 <span class="fs-4 fw-bold">Total Amount:</span>
-                <span class="fs-4 amount fw-bold ms-2">₹300</span>
+                <span class="fs-4 amount fw-bold ms-2">₹<%= session.cart.totalPrice %></span>
             </div>
         </div>
 
+        <% if(user){%>
         <div class="mt-4">
             <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Phone Number" aria-label=" Username" aria-describedby="basic-addon1">
@@ -51,13 +44,13 @@
             </div>
             <button class="btn-primary  my-4 py-2 px-4 rounded-pill" type="submit">Order Now</button>
         </div>
-        
-        <button class="btn-primary  my-4 py-2 px-4 rounded-pill" type="submit">Logintocontinue</button>
-
+        <% } else{%>
+        <button class="btn-primary  my-4 py-2 px-4 rounded-pill" type="submit"><a href="/login">Logintocontinue</a></button>
+        <% }%>    
     </div>
 
-
-    <!-- <div class="empty-cart">
+    <%} else{%>
+    <div class="empty-cart">
 
         <div class="container mx-auto text-center">
 
@@ -69,7 +62,8 @@
                     style="text-decoration: none;">Go back</a>
             </div>
         </div>
-
-    </div> -->
+        
+    </div>
+    <% } %> 
 
 </section>

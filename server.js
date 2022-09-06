@@ -10,7 +10,7 @@ const flash = require('express-flash');
 const MongoDbStore = require('connect-mongo');
 const passport = require('passport');
 
-let PORT = process.env.PORT || 3000;
+let PORT = process.env.PORT || 5000;
 
 // DataBase Connection; 
 const url = "mongodb://localhost:27017/pizza";
