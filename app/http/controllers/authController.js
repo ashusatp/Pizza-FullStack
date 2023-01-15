@@ -39,6 +39,7 @@ const authController = () => {
           return res.redirect("/");
         });
       })(req, res, next);
+      
     },
 
 

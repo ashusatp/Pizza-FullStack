@@ -10,19 +10,18 @@ const flash = require('express-flash');
 const MongoDbStore = require('connect-mongo');
 const passport = require('passport');
 
-let PORT = process.env.PORT || 5000;
+let PORT = process.env.PORT || 5800;
 
 // DataBase Connection; 
-const url = "mongodb://localhost:27017/pizza";
+const url = "mongodb://0.0.0.0:27017/pizza";
 mongoose.connect(url).then( ()=> console.log("connection successfull....")).catch((err) => console.log(err));
 const connection = mongoose.connection;
 
-
-
+// TTarrxuMNUB545S4
 
 //session Config env
 app.use(session({
-    secret: process.env.COOKIE_SECRET,
+    secret: process.env.COOKIE_SECRET, // cookie encription
     resave: false,
     store:  MongoDbStore.create({
         mongoUrl:url,
